@@ -1,0 +1,13 @@
+Script started on 2023-02-09 20:24:25-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="186" LINES="12"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ clojure
+[KClojure 1.10.1
+[Kuser=> [Kuser=> [Kuser=> (fn [a b c][C[C[C[C[C[C[C (max (Math/abs a)[C[C[C[C[C[C[C[C[C[C[C[C (Math/abs b)[C[C[C[C[C[C[C[C[C[C[C[C (MAt[K[Katg[Kh/abs c)[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(fn [a b c] (max (Math/abs a) (Math/abs b) (Math/abs c)))
+[K#object[user$eval136$fn__137 0x5b3f3ba0 "user$eval136$fn__137@5b3f3ba0"]
+user=> [Kuser=> [Kuser=> (fn [a b c] (max (Math/abs a) (Math/abs b) (Math/abs c))) )[C )[C[C )[1@1[C[C )[1@2[C[C )[1@-[1@5[C[C[C[C[C[C[C[K(fn [a b c] (max (Math/abs a) (Math/abs b) (Math/abs c)) 1 2 -5  )
+#object[user$eval140$fn__141 0x1b32cd16 "user$eval140$fn__141@1b32cd16"]
+user=> [Kuser=> [Kuser=> (fn [a b c] (max (Math/abs a) (Math/abs b) (Math/abs c)) 1 2 -5  )[1P)[C[C[C[C[C[C[C[K(fn [a b c] (max (Math/abs a) (Math/abs b) (Math/abs c)) 1 2 -5 )
+#object[user$eval144$fn__145 0x5d39f2d8 "user$eval144$fn__145@5d39f2d8"]
+user=> [Kuser=> [Kuser=> 
+[K]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ exit
+
+Script done on 2023-02-09 20:25:40-05:00 [COMMAND_EXIT_CODE="0"]
