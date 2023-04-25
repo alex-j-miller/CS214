@@ -1,0 +1,81 @@
+I USED '#' to make a comment
+
+
+#sender
+message>fields>Source>originator>authentic                                                                                From
+message>fields>Source>originator>authentic>#list>special                                                                  :
+message>fields>Source>originator>authentic>address>mailbox>addr-spec>local-part>atom                                      billgates 
+message>fields>Source>originator>authentic>address>mailbox>addr-spec>special                                              @
+message>fields>Source>originator>authentic>address>mailbox>addr-spec>domain>sub-domain>domain-ref>atom                    microsoft
+message>fields>Source>originator>authentic>address>mailbox>addr-spec>domain>sub-domain>domain-ref>special                 .
+message>fields>Source>originator>authentic>address>mailbox>addr-spec>domain>sub-domain>sub-domain>domain-ref>atom         com
+
+
+#destination
+message>fields>destination>                                                                                               To
+message>fields>destination>address>mailbox>addr-spec>local-part>atom                                                      elonmusk
+message>fields>destination>address>mailbox>addr-spec>special                                                              @
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>atom                                    paypal
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>special                                 .
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>atom                                    com
+
+message>fields>destination>address>mailbox>addr-spec>special                                                              ,
+
+message>fields>destination>address>mailbox>addr-spec>local-part>atom                                                      edwardsnowden
+message>fields>destination>address>mailbox>addr-spec>special                                                              @
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>atom                                    nsa
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>special                                 .
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>atom                                    gov
+
+
+#CC
+message>fields>destination>                                                                                               CC
+message>fields>destination>address>mailbox>addr-spec>local-part>atom                                                      ajm94
+message>fields>destination>address>mailbox>addr-spec>special                                                              @
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>atom                                    calvin
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>special                                 .
+message>fields>destination>address>mailbox>addr-spec>domain>sub-domain>domain-ref>atom                                    edu
+
+
+
+#subject
+message>fields>optional-field                                                                                             Subject
+message>fields>optional-field>text                                                                                        THIS IS AN EMAIL
+
+
+
+
+#date
+message>fields>dates>orig-date>date-time>day                                                                              Mon
+message>fields>dates>orig-date>date-time>date>DIGIT                                                                       19
+message>fields>dates>orig-date>date-time>date>month                                                                       Mar
+message>fields>dates>orig-date>date-time>date>DIGIT                                                                       03
+message>fields>dates>orig-date>date-time>time>hour>DIGIT                                                                  12
+message>fields>dates>orig-date>date-time>time>hour>DIGIT                                                                  00
+message>fields>dates>orig-date>date-time>time>zone                                                                        EST
+
+
+#message
+message>text                                                                                                              THIS IS MY EMAIL MESSAGE.
+
+
+
+
+
+
+
+Within section 3.3
+    1. Categorize the tokens as terminal and non-terminal.
+        terminal: CHAR,ALPHA,DIGIT,CTL,CR,LF,SPACE,HTAB,<">,atom
+        non-terminal: CRLFmLWSP-char,linear-white-space,speicals,delimiters,text,quoted-string,qtext,domain-literal,dtext,comment,ctext,quoted-pair,phrase,word
+
+    2. Now reflect, how did the divide between terminals and non-terminals effect the task of figuring out how to classify things?
+        I classified things as terminal if they didn't point to a different token, if it did point to a different token then it is a non-terminal
+
+
+Within section 4.1
+    1. What is the "artifact of the notation" that the note is talking about?
+        It is basically saying that because of the notation that we are using for certain things we need to put things in a certain order. For example, headers can be put anywhere but the text of the header must come after the header.
+
+Overall, do you think that this was a good specification?
+    I don't think that this is a good specification because I do not like when for something to work properly you need to put something in a certain order (see headers).
