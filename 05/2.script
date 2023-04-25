@@ -1,19 +1,0 @@
-Script started on 2023-02-13 19:22:40-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="12"]
-]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ clojure
-[KClojure 1.10.1
-[Kuser=> [Kuser=> [Kuser=> (def triple (fn [x][C[C[C (* x 3)[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(def triple (fn [x] (* x 3)))
-[K#'user/triple
-user=> [Kuser=> [Kuser=> (triple 4)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(triple 4)
-12
-user=> [Kuser=> [Kuser=> defn[K[K[K[K(defn triple [x][C[C[C ( [K([K* x 3)[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(defn triple [x] (* x 3))
-#'user/triple
-user=> [Kuser=> [Kuser=> (#(* % #[K3)[C[C[C[C[C[C[C 4)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(#(* % 3) 4)
-12
-user=> [Kuser=> [Kuser=> (def sum2Squars[K[K[Kares #(+ (* %1 %1)[C[C[C[C[C[C[C[C[C (* %2 %2)[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(def sum2Squares #(+ (* %1 %1) (* %2 %2)))
-#'user/sum2Squares
-user=> [Kuser=> [Kuser=> (sum2Squares 3 4)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(sum2Squares 3 4)
-25
-user=> [Kuser=> [Kuser=> 
-[K]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ exit
-
-Script done on 2023-02-13 19:25:49-05:00 [COMMAND_EXIT_CODE="0"]

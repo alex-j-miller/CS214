@@ -1,16 +1,0 @@
-Script started on 2023-02-09 20:20:49-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="186" LINES="12"]
-]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ clojure
-[KClojure 1.10.1
-[Kuser=> [Kuser=> [Kuser=> (fn [ParameterList][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C FunctionBody)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(fn [ParameterList] FunctionBody)
-[KSyntax error compiling at (REPL:1:1).
-Unable to resolve symbol: FunctionBody in this context
-user=> [Kuser=> [Kuser=> (fn [x][C[C[C (+ x x)[C[C[C[C[C[C[C )[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(fn [x] (+ x x) )
-#object[user$eval138$fn__139 0x5328a9c1 "user$eval138$fn__139@5328a9c1"]
-user=> [Kuser=> [Kuser=> (fn [x] (+ x x) )2)1)[C[C[C[C[C[C[C[C[K(fn [x] (+ x x) 21)
-#object[user$eval142$fn__143 0x16fe9c29 "user$eval142$fn__143@16fe9c29"]
-user=> [Kuser=> [Kuser=> ((fb[Kn [x y[[K][C[C[C[C[C (+ (* x x [K)[C[C[C[C[C[C[C (* y y)[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C3 4[K[K[K 3 4)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K((fn [x y] (+ (* x x) (* y y))) 3 4)
-25
-user=> [Kuser=> [Kuser=> 
-[K]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ exit
-
-Script done on 2023-02-09 20:23:00-05:00 [COMMAND_EXIT_CODE="0"]

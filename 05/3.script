@@ -1,61 +1,0 @@
-Script started on 2023-02-13 19:26:54-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="12"]
-]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ clojure
-[KClojure 1.10.1
-[Kuser=> [Kuser=> [Kuser=> (map inc [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map inc [1 2 3 4])
-(2 3 4 5)
-user=> [Kuser=> [Kuser=> (map - [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map - [1 2 3 4])
-(-1 -2 -3 -4)
-user=> [Kuser=> [Kuser=> (map - [1 2 3 4][C[C[C[C[C[C[C[C[C [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map - [1 2 3 4] [1 2 3 4])
-(0 0 0 0)
-user=> [Kuser=> [Kuser=> (map even? [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map even? [1 2 3 4])
-(false true false true)
-user=> [Kuser=> [Kuser=> (map str ["a" "b" "c"][C[C[C[C[C[C[C[C[C[C[C[C[C ["A" "B" "C"][C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map str ["a" "b" "c"] ["A" "B" "C"])
-("aA" "bB" "cC")
-user=> [Kuser=> [Kuser=>  (map count [[11][C[C[C[C [11 22][C[C[C[C[C[C[C [11 22 33][C[C[C[C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K (map count [[11] [11 22] [11 22 33]])
-(1 2 3)
-user=> [Kuser=> [Kuser=> (map + [1 2 3 4][C[C[C[C[C[C[C[C[C [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map + [1 2 3 4] [1 2 3 4])
-(2 4 6 8)
-user=> [Kuser=> [Kuser=> (map * [1 2 3 4][C[C[C[C[C[C[C[C[C [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map * [1 2 3 4] [1 2 3 4])
-(1 4 9 16)
-user=> [Kuser=> [Kuser=>  (Math/abs -3)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K (Math/abs -3)
-3
-user=> [Kuser=> [Kuser=> (map Math/abs [-1 2 -3 4 -5][C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map Math/abs [-1 2 -3 4 -5])
-Syntax error compiling at (REPL:1:1).
-Unable to find static field: abs in class java.lang.Math
-user=> [Kuser=> [Kuser=> (map (fn [x][C[C[C (if (< x 0)[C[C[C[C[C[C[C (- x)[C[C[C[C[C x)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [-1 2 -3 4 -5][C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(map (fn [x] (if (< x 0) (- x) x)) [-1 2 -3 4 -5])
-[K(1 2 3 4 5)
-user=> [Kuser=> [Kuser=> (defn subtract-n [n sequence][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K   [K(defn subtract-n [n sequence]
-[K   (map (fn [x][C[C[C (- x n)[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C sequence)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K   )[K   (map (fn [x] (- x n)) sequence)
-[K   )[K[K   )
-
-#'user/subtract-n
-user=> user=> [Kuser=> user=> [Kuser=> user=> (subtract-n 2 [5 6 7 8][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(subtract-n 2 [5 6 7 8])
-(3 4 5 6)
-user=> [Kuser=> [Kuser=> (filter odd? [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter odd? [1 2 3 4])
-(1 3)
-user=> [Kuser=> [Kuser=> (filter even? [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter even? [1 2 3 4])
-(2 4)
-user=> [Kuser=> [Kuser=>  (filter neg? [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K (filter neg? [1 2 3 4])
-()
-user=> [Kuser=> [Kuser=> (filter neg? [-1 1 -2 2 -3 3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter neg? [-1 1 -2 2 -3 3])
-(-1 -2 -3)
-user=> [Kuser=> [Kuser=> (filter pos?  [-1 1 -2 2 -3 3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter pos?  [-1 1 -2 2 -3 3])
-(1 2 3)
-user=> [Kuser=> [Kuser=> (filter pos?  [-1 1 -2 2 -3 3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter pos?  [-1 1 -2 2 -3 3])
-(1 2 3)
-user=> [Kuser=> [Kuser=> (filter pos?  [-1 1 -2 2 -3 3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter pos?  [-1 1 -2 2 -3 3])
-(1 2 3)
-user=> [Kuser=> [Kuser=> (filter pos?  [-1 1 -2 2 -3 3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter pos?  [-1 1 -2 2 -3 3])
-(1 2 3)
-user=> [Kuser=> [Kuser=> (filter pos?  [-1 1 -2 2 -3 3][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter pos?  [-1 1 -2 2 -3 3])
-(1 2 3)
-user=> [Kuser=> [Kuser=>  (filter (fn [x][C[C[C (and (pos? x)[C[C[C[C[C[C[C[C (even? x)[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [-1 1 -2 2 -3 3 -4 4][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K (filter (fn [x] (and (pos? x) (even? x))) [-1 1 -2 2 -3 3 -4 4])
-(2 4)
-user=> [Kuser=> [Kuser=> (filter (fn [x][C[C[C (and (pos? x)[C[C[C[C[C[C[C[C (even? x)[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C [-1 1 -2 2 -3 3 -4 4][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1@n[1@e[1@g[C[C[C[C[C[C[C[C[C[1P[1P[1P[C[1P[1@o[1@d[1@d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(filter (fn [x] (and (neg? x) (odd? x))) [-1 1 -2 2 -3 3 -4 4])
-(-1 -3)
-user=> [Kuser=> [Kuser=> (filter (fn [x] (and (neg? x) (odd? x))) [-1 1 -2 2 -3 3 -4 4])[1P[1P[1P[1@o[1@r[C[C[C[C[C[C[C[K(filter (fn [x] (or (neg? x) (odd? x))) [-1 1 -2 2 -3 3 -4 4])
-(-1 1 -2 -3 3 -4)
-user=> [Kuser=> [Kuser=> 
-[K]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ exit
-
-Script done on 2023-02-13 19:32:11-05:00 [COMMAND_EXIT_CODE="0"]
