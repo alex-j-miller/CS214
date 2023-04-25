@@ -1,0 +1,147 @@
+Script started on 2023-01-26 19:59:25-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="11"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ cat switchJava.java 
+import java.util.Scanner;  // include class for Scanner
+
+public class switchJava {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        int avg = keyboard.nextInt();
+        System.out.println(letterGrade(avg));
+    }
+
+    public static char letterGrade(int avg) {
+        switch (avg) {
+            case 10:
+            case 9:
+                return 'A';
+            case 8:
+                return 'B';
+            case 7:
+                return 'C';
+            case 6:
+                return 'D';
+            default:
+                return 'F';
+        }
+    }
+}]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ cat switchJava.java [6Pjava YearCodesc -deprecation YearCodes.java[K[K-deprecation switchJava.java 
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ javac -deprecation switchJava.java [Kjava switchJava
+10
+A
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ java switchJava
+9
+A
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ exit
+
+Script done on 2023-01-26 20:00:09-05:00 [COMMAND_EXIT_CODE="1"]
+Script started on 2023-01-26 20:25:23-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="11"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ cat switcha[KAda.adb
+with Ada.Text_IO, Ada.Float_Text_IO;
+use  Ada.Text_IO, Ada.Float_Text_IO;
+
+procedure switchAda is
+
+    grade : Integer;
+    c : Character;
+
+    function letterGrade(a: in Integer) return Character is
+    begin
+        case a is
+            when 10 => return'A';
+            when 9 => return 'A';
+            when 8 => return 'B';
+            when 7 => return 'C';
+            when 6 => return 'D';
+            when others => return 'F';
+        end case;
+    end letterGrade;
+
+begin
+    Put("enter num: ");
+    grade := Integer'Value(Get_Line);
+    Put(letterGrade(grade));
+end switchAda;]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ cat switchAda.adb[1Pjava switchJava1[K1cat switchAda.adb[Kgnatmake switchAda.adb 
+gnatmake: "switchAda" up to date.
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ gnatmake switchAda.adb [K./switchAda 
+enter num: 10
+A
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ ./switchAda 
+enter num: 9
+A
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ ./switchAda 
+enter num: 1
+F
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ exit
+
+Script done on 2023-01-26 20:25:58-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-01-30 20:16:10-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="12"]
+c]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ ca[K[Kcat letter_grade.clj 
+(ns letter_grade)
+
+(defn letterGrade [grade]
+  (cond
+    (= grade 10) "A"
+    (= grade 9) "A"
+    (= grade 8) "B"
+    (= grade 7) "C"
+    (= grade 6) "D"
+    :else "F"
+  )
+)
+
+(defn -main []
+  (let
+    [ grade (read) ]
+    (println (letterGrade grade))
+  )
+)]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clo
+clog2_join    clog2_print   clog2print    clog2_repair  clog2TOslog2  clogprint     clogTOslog2   clojure       clojure1.10   clojurec      clojurec1.10  
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clo[Kojure -m letter_grade.clj [K[K[K[K[K
+10
+A
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clojure -m letter_grade
+9
+A
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clojure -m letter_grade1[K
+3
+F
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ exit
+
+Script done on 2023-01-30 20:16:38-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-01-26 21:00:46-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="11"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ cat switchr[KRuby.rb 
+def letterGrade (g)
+    case g
+    when 9..10
+        return 'A'
+    when 8..9
+        return 'B'
+    when 7..8
+        return 'C'
+    when 6..7
+        return 'D'
+    else
+        return 'F'
+    end
+end
+
+if __FILE__ == $0
+    puts "Num: "
+    grade = gets.chomp.to_f
+    puts letterGrade(grade)
+end]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ cat switchRuby.rb [6P./switchAda[C[11@gnatmake switchAda.adb[C[11P./switchAda[C[6@cat switchRuby.rb[C[Kruby switchRuby.rb 
+Num: 
+10
+A
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ ruby switchRuby.rb 
+Num: 
+9
+A
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ ruby switchRuby.rb 
+Num: 
+1
+F
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/03[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ exit
+
+Script done on 2023-01-26 21:01:07-05:00 [COMMAND_EXIT_CODE="0"]

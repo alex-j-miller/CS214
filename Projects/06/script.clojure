@@ -1,0 +1,36 @@
+Script started on 2023-02-16 21:02:31-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ cat quad.clj
+(ns quad)
+(defn quadratic-roots [a b c]
+  (if (not= a 0)
+    (let [arg (- (* b b) (* 4 a c))]
+      (if (>= arg 0)
+        [(/ (+ (- b) (Math/sqrt arg)) (* 2 a))
+         (/ (- (- b) (Math/sqrt arg)) (* 2 a))]
+        (do
+          (println "\n*** quadratic-roots: b^2 - 4ac is negative!")
+          [0 0])))
+    (do
+      (println "\n*** quadratic-roots: a is zero!")
+      [0 0])))
+
+(let [a (read-line )
+      b (read-line )
+      c (read-line )]
+  (let [roots (quadratic-roots (Double/parseDouble a)
+                               (Double/parseDouble b)
+                               (Double/parseDouble c))]
+    (if (not= roots [0 0])
+      (do
+        (println "Root 1:" (first roots))
+        (println "Root 2:" (second roots)))
+      (println "Invalid roots."))))]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ clojure -m quad
+1
+25
+1
+Root 1: -0.04006420562288859
+Root 2: -24.95993579437711
+
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ exit
+
+Script done on 2023-02-16 21:02:55-05:00 [COMMAND_EXIT_CODE="1"]

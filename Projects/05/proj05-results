@@ -1,0 +1,62 @@
+Script started on 2023-02-13 20:12:31-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="20"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/05[00m$ cat proj05.clj 
+(ns proj05)
+
+(defn my-reverse [lst]
+  (if (empty? lst)
+    '()
+    (concat (my-reverse (rest lst)) (list (first lst)))))
+
+(defn super-reverse [lst]
+  (cond
+    (empty? lst) lst
+    (list? (first lst)) (concat (super-reverse (rest lst)) [(super-reverse (first lst))])
+    :else (concat (super-reverse (rest lst)) [(first lst)])))
+
+(defn member? [x lst]
+  (if (empty? lst)
+    false
+    (or (= x (first lst))
+        (member? x (rest lst)))))
+
+(defn subsequence [lst i n]
+  (cond
+    (or (empty? lst) (< i 0) (<= (count lst) i))
+    nil
+    (zero? n)
+    '()
+    :else
+    (if (= 0 i)
+      (cons (first lst) (subsequence (rest lst) i (dec n)))
+      (subsequence (rest lst) (dec i) n))))
+
+(defn -main []
+
+    (println (my-reverse '(a b (c d) (e (f g)))))
+    (println (super-reverse '(a b (c d) (e (f g)))))
+
+    (println (member? '(1 2) '((1 2) 3 (4 (5 6)))))
+    (println (member? 3 '((1 2) 3 (4 (5 6)))))
+    (println (member? '(4 (5 6)) '((1 2) 3 (4 (5 6)))))
+
+    (println (member? 1 '((1 2) 3 (4 (5 6)))))
+    (println (member? 2 '((1 2) 3 (4 (5 6)))))
+    (println (member? 4 '((1 2) 3 (4 (5 6)))))  
+
+    (println (subsequence '(1 2 (3 4) (5 (6 7))) 1 2))  
+    (println (subsequence '(1 2 3 4 5 6 7) 2 4))  
+
+)]0;ajm94@gold17: ~/Desktop/CS 214/Projects/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/05[00m$ clojure -m proj05[K5
+((e (f g)) (c d) b a)
+(((g f) e) (d c) b a)
+true
+true
+true
+false
+false
+false
+(2 (3 4))
+(3 4 5 6)
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/05[00m$ exit
+
+Script done on 2023-02-13 20:12:47-05:00 [COMMAND_EXIT_CODE="0"]

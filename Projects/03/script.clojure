@@ -1,0 +1,34 @@
+Script started on 2023-01-30 20:16:10-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="12"]
+c]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ ca[K[Kcat letter_grade.clj 
+(ns letter_grade)
+
+(defn letterGrade [grade]
+  (cond
+    (= grade 10) "A"
+    (= grade 9) "A"
+    (= grade 8) "B"
+    (= grade 7) "C"
+    (= grade 6) "D"
+    :else "F"
+  )
+)
+
+(defn -main []
+  (let
+    [ grade (read) ]
+    (println (letterGrade grade))
+  )
+)]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clo
+clog2_join    clog2_print   clog2print    clog2_repair  clog2TOslog2  clogprint     clogTOslog2   clojure       clojure1.10   clojurec      clojurec1.10  
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clo[Kojure -m letter_grade.clj [K[K[K[K[K
+10
+A
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clojure -m letter_grade
+9
+A
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ clojure -m letter_grade1[K
+3
+F
+]0;ajm94@gold22: ~/Desktop/CS 214/Projects/03[01;32majm94@gold22[00m:[01;34m~/Desktop/CS 214/Projects/03[00m$ exit
+
+Script done on 2023-01-30 20:16:38-05:00 [COMMAND_EXIT_CODE="0"]

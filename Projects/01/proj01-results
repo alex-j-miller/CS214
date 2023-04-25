@@ -1,0 +1,297 @@
+Script started on 2023-01-12 19:35:51-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="197" LINES="13"]
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ cat rectangle_area.java 
+import java.util.Scanner;  // include class for Scanner
+
+public class rectangle_area {
+     public static double rectArea(double s1, double s2) {
+        return s1*s2;               // return an expression
+     } 
+	
+  // main program
+  public static void main(String[] args) {
+      // prompt
+      System.out.println("\n\nTo compute the area of a rectangle,");
+      System.out.print(" enter its height: ");
+
+      // Create a connection named keyboard to standard in
+      Scanner keyboard = new Scanner(System.in);
+
+      //Get the number from the user
+      double side1 = keyboard.nextDouble();
+
+      System.out.print(" enter its length: ");
+      double side2 = keyboard.nextDouble();
+
+      // output area
+      System.out.println("\nThe area is " + rectArea(side1, side2) + "\n");
+      System.out.printf("The area is %f\n\n", rectArea(side1, side2));
+      System.out.printf("The area is %.15f\n\n", rectArea(side1, side2));
+
+      
+  } // main method
+
+} // class RectArea]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ javac rectangle_area.java 
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ java rectangle_area
+
+
+To compute the area of a rectangle,
+ enter its height: 1
+ enter its length: 1
+
+The area is 1.0
+
+The area is 1.000000
+
+The area is 1.000000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ java rectangle_area
+
+
+To compute the area of a rectangle,
+ enter its height: 2
+ enter its length: 2
+
+The area is 4.0
+
+The area is 4.000000
+
+The area is 4.000000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ java rectangle_area
+
+
+To compute the area of a rectangle,
+ enter its height: 2.5
+ enter its length: 2.5
+
+The area is 6.25
+
+The area is 6.250000
+
+The area is 6.250000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ java rectangle_area
+
+
+To compute the area of a rectangle,
+ enter its height: 4.999999
+ enter its length: 4.999999
+
+The area is 24.999990000001
+
+The area is 24.999990
+
+The area is 24.999990000001000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ exit
+
+Script done on 2023-01-12 19:37:40-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-01-12 19:48:51-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="197" LINES="13"]
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ java rectangle_areac rectangle_area.java [7P rectangle_area[K./ [Kcircle[K[K./rect_area 
+
+To compute the area of a rect,
+enter its height: 1
+enter its length: 1
+
+The rect's area is  1.00000E+00
+
+The rect's area is 1.000000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ ./rect_area 
+
+To compute the area of a rect,
+enter its height: 2
+enter its length: 2
+
+The rect's area is  4.00000E+00
+
+The rect's area is 4.000000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ ./rect_area 
+
+To compute the area of a rect,
+enter its height: 2.5
+enter its length: 2.5
+
+The rect's area is  6.25000E+00
+
+The rect's area is 6.250000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ ./rect_area 
+
+To compute the area of a rect,
+enter its height: 4.99999
+enter its length: 4.99999
+
+The rect's area is  2.49999E+01
+
+The rect's area is 24.999900817871094
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ exit
+
+Script done on 2023-01-12 19:49:23-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-01-12 20:45:02-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="197" LINES="13"]
+cs a  cat rec]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ cat rect_area.clj 
+;;;; rect_area.clj calculates the area of a rect.
+;;;;
+;;;; Input: The radius of a rect.
+;;;; Output: The area of that rect.
+;;;;
+;;;; Usage: clojure -m rect_area
+;;;;
+;;;; Begun by: Prof. Adams, for CS 214 at Calvin College.
+;;;; Completed by:
+;;;; Date:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(ns rect_area) ; namespace function names the program
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Function rectArea() computes the area of a rect.
+;;; Receive: itsLength, itsHeight, a number.
+;;; Precondition: itsLength, itsHeight >= 0.0.
+;;; Return: the area of the corresponding rect.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn rectArea [itsLength itsHeight]
+  (* itsLength itsHeight 1.0)  
+)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Function -main is where execution begins
+;;; Input: the height and length of a rect.
+;;; Output: the area of that rect.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defn -main []
+  (println "\nTo compute the area of a rect,")
+  (print   " enter its height: ") (flush)
+  (let
+    [ height (read) ]
+    (assert (>= height 0) "-main: height must be positive")
+
+    (print   " enter its length: ") (flush)
+    (let
+     [ length (read) ]
+
+
+     (assert (>= length 0) "-main: length must be positive")
+     (printf "\nThe area is %f\n\n" (rectArea length height))
+
+     (print "\nThe area is ")
+     (print (rectArea length height))
+     (print "\n\n")
+
+    (printf "\nThe area is %.15f\n\n" (rectArea length height))
+    )
+  )
+)]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ cat rect_area.clj [6P./rect_area[C[6@cat rect_area.clj[C[Kclojure -, [K[Km rect_area
+
+To compute the area of a rect,
+ enter its height: 1
+ enter its length: 1
+
+The area is 1.000000
+
+
+The area is 1.0
+
+
+The area is 1.000000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ clojure -m rect_area
+
+To compute the area of a rect,
+ enter its height: 2
+ enter its length: 2
+
+The area is 4.000000
+
+
+The area is 4.0
+
+
+The area is 4.000000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ clojure -m rect_area
+
+To compute the area of a rect,
+ enter its height: 2.5
+ enter its length: 2.5
+
+The area is 6.250000
+
+
+The area is 6.25
+
+
+The area is 6.250000000000000
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ clojure -m rect_area
+
+To compute the area of a rect,
+ enter its height: 4.99999
+ enter its length: 4.99999
+
+The area is 24.999900
+
+
+The area is 24.999900000100002
+
+
+The area is 24.999900000100002
+
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ exit
+
+Script done on 2023-01-12 20:45:52-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-01-12 20:50:15-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="197" LINES="13"]
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ cat rect_area.rb
+#! /usr/bin/ruby
+# rect_area.rb computes the area of a rect given its length and width
+# 
+# Input: the length and width of a rect
+# Precondition: the length and width is not negative
+# Output: the area of the rect.
+#
+# Begun by: Prof. Adams, for CS 214 at Calvin College.
+# Completed by:
+# Date:
+###############################################################
+
+# function rectArea returns a rect's area, given its length and width
+# Parameters: length and width, a number
+# Precondition: length and width > 0.
+# Returns: the area of a rect whose length and width is length and width.
+def rectArea(length, width)
+    length * width 
+end
+
+if __FILE__ == $0
+   puts "To compute the area of a rect,"
+   print " enter its length: "
+   length = gets.chomp.to_f
+   print " enter its height: "
+   height = gets.chomp.to_f
+   print "The rect's area is: "
+   puts rectArea(length, height)
+end]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ ruby rect_area.rb
+To compute the area of a rect,
+ enter its length: 1
+ enter its height: 1
+The rect's area is: 1.0
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ ruby rect_area.rb
+To compute the area of a rect,
+ enter its length: 2
+ enter its height: 2
+The rect's area is: 4.0
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ ruby rect_area.rb
+To compute the area of a rect,
+ enter its length: 2.5
+ enter its height: 2.5
+The rect's area is: 6.25
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ ruby rect_area.rb
+To compute the area of a rect,
+ enter its length: 4.99999
+ enter its height: 4.99999
+The rect's area is: 24.999900000100002
+]0;ajm94@gold29: ~/Desktop/CS 214/Projects/01[01;32majm94@gold29[00m:[01;34m~/Desktop/CS 214/Projects/01[00m$ exit
+
+Script done on 2023-01-12 20:50:50-05:00 [COMMAND_EXIT_CODE="0"]

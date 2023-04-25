@@ -1,0 +1,110 @@
+This week's project is to practice creating BNF definitions and work with derivations.
+
+The are three key ideas to keep in mind:
+
+If a portion of a language construct is complicated, hide the complexity by creating a nonterminal for it, and then define the nonterminal (later).
+If a language construct is optional, create a nonterminal that has two productions, one of which defines the optional part, and the other of which is an Ø-production.
+If a language construct can be repeated, create a non-terminal that has two productions, one of which is a recursive production providing the repetition, and the other of which is an Ø-production by which the recursion can terminate.
+Using these ideas, define the constructs below with BNF productions. Underline the terminals in your productions, to distinguish them from the nonterminals. You may assume that the following have already been defined:
+   <letter>   ::=   A | B | C | D | E | F | G | H | I | J | K | L 
+                    | M | N | O | P | Q | R | S | T | U | V | W 
+                    | X | Y | Z | a | b | c | d | e | f | g | h
+                    | i | j | k | l | m | n | o | p | q | r | s
+                    | t | u | v | w | x | y | z
+   <digit>   ::=   0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+   
+A Java character literal
+
+<char> ::= ' <letter> '  | ' <digit> ' | '<symbol> '
+
+
+A Java character string literal
+
+<string> ::= <letter> <string>   | <digit> <string> | <symbol> <string> | ε
+<strliteral> ::= " <string> " 
+
+
+A Java integer literal
+
+<int> ::= <digit> <int> | ε
+
+
+A Java real (floating point) literal
+
+<float> ::= <digit>+ "." <digit>+
+
+
+A Java identifier:
+
+<first> ::= <letter> | $ | _
+<valid? ::= <letter> | <digit> | $ | _ | <valid> | ε
+<id> ::= <first> <valid>
+
+
+A Java function declaration (prototype):
+
+<access> ::= private | public | default | protected
+<mod> ::= static | final | abstract | syncronized | transient | volatile | native
+<type> ::= int | float | double | long | char | byte | boolean | short
+<return> ::= <type> | reference | void 
+<name> ::= <id>
+<param> ::= <type> <id>
+<params> ::= <param> | <param> , <params>
+<param_list> ::= <params> | ε
+<function> ::= <access> <mod> <return> <name>  ( <param_list> ) ;
+
+
+A Java if statement (you may assume that the nonterminals <statement> and <expression> are defined elsewhere):
+
+<ifStmt> ::= if ( <expression>+ ) <statement>+
+
+
+A Java while statement (you may assume that the nonterminals <statement> and <expression> are defined elsewhere):
+
+<whileStmt> ::= while ( <expression> ) <statement>
+
+
+Prove that the following grammar is ambiguous:
+<S> ::= <A>
+<A> ::= <A> + <A> | <id>
+<id> ::= a | b | c
+
+It is ambiguous becuase it can generate the same sentence using multiple different parse trees
+
+
+<S>
+<A>
+<A> + <A>
+<id>    <A> + <A>
+a        <id> <A> + <A>
+	  b    <id>   <id>
+	        c     b
+	        
+	        
+<S>
+<A>
+<A>            +     <A>
+<A> +     <A>        <id>
+<A> + <A>     <id>    b
+<id>  <id>     c
+a       b      
+
+
+
+Give a left-most derivation for A = A * (B + C) using the following BNF grammar:
+<assign> ::= <id> = <expr>
+<id> ::= A | B | C
+<expr> ::= <expr> + <term> | <term>
+<term> ::= <term> * <factor> | <factor>
+<factor> ::= ( <expr> ) | <id>
+
+      <assign>
+<id>            <expr>
+A               <term>
+	   <term> *  <term>
+	 <factor>      (<expr>)
+	 <id>		(<expr> + <term> )
+	  A		<term>    <factor>
+			<factor>   <id>
+			<id>       C
+			B

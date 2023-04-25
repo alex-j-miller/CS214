@@ -1,0 +1,160 @@
+Script started on 2023-02-16 20:53:36-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ javac -deprecation quad.java 
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ java[K[K[K[Kcat quad.java 
+import java.lang.Math;
+import java.util.Scanner;
+
+public class quad {
+    public static boolean quadraticRoots(double a, double b, double c,
+                                         double[] roots) {
+        if (a != 0) {
+            double arg = Math.pow(b, 2.0) - 4 * a * c;
+            if (arg >= 0) {
+                roots[0] = (-b + Math.sqrt(arg)) / (2 * a);
+                roots[1] = (-b - Math.sqrt(arg)) / (2 * a);
+                return true;
+            } else {
+                System.err.println("\n*** quadraticRoots(): b^2 - 4ac is negative!");
+                return false;
+            }
+        } else {
+            System.err.println("\n*** QuadraticRoots(): a is zero!");
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        double a, b, c;
+        double[] roots = new double[2];
+
+        System.out.println("Enter the values of a, b, and c:");
+        Scanner scanner = new Scanner(System.in);
+
+        a = scanner.nextDouble();
+        b = scanner.nextDouble();
+        c = scanner.nextDouble();
+
+        if (quadraticRoots(a, b, c, roots)) {
+            System.out.println("The roots are: " + roots[0] + " and " + roots[1]);
+        }
+    }
+}]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ java quad
+Enter the values of a, b, and c:
+1
+25
+1
+The roots are: -0.04006420562288859 and -24.95993579437711
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ exit
+
+Script done on 2023-02-16 20:53:59-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-03-13 20:00:14-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="182" LINES="10"]
+]0;ajm94@gold18: ~/Desktop/CS 214/Projects/06[01;32majm94@gold18[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ cat quad.adb 
+-- Alex Miller
+-- 3/13
+
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
+with Ada.Numerics; use Ada.Numerics;
+with Ada.Numerics.Elementary_Functions; use Ada.Numerics.Elementary_Functions;
+
+-- with Ada.Numerics.Generic_Complex_Elementary_Functions.Sqrt; use Ada.Numerics.Generic_Complex_Elementary_Functions;
+
+procedure quad(A : String; B : String; C : String) is
+   Root, Arg, A_Float, B_Float, C_Float : Float;
+begin
+   Get(C_Float);
+   Get(A_Float);
+   Get(B_Float);
+
+   -- Calculate discriminant
+    Arg := B_Float**2 - 4.0*A_Float*C_Float;
+
+   -- Calculate root
+   Root := (-B_Float + (Sqrt(Arg)) / (2.0*A_Float));
+
+   Put(Root);
+end quad;]0;ajm94@gold18: ~/Desktop/CS 214/Projects/06[01;32majm94@gold18[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ gnatmake quad.adb 
+]0;ajm94@gold18: ~/Desktop/CS 214/Projects/06[01;32majm94@gold18[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ exit
+
+Script done on 2023-03-13 20:00:27-04:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-02-16 21:02:31-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ cat quad.clj
+(ns quad)
+(defn quadratic-roots [a b c]
+  (if (not= a 0)
+    (let [arg (- (* b b) (* 4 a c))]
+      (if (>= arg 0)
+        [(/ (+ (- b) (Math/sqrt arg)) (* 2 a))
+         (/ (- (- b) (Math/sqrt arg)) (* 2 a))]
+        (do
+          (println "\n*** quadratic-roots: b^2 - 4ac is negative!")
+          [0 0])))
+    (do
+      (println "\n*** quadratic-roots: a is zero!")
+      [0 0])))
+
+(let [a (read-line )
+      b (read-line )
+      c (read-line )]
+  (let [roots (quadratic-roots (Double/parseDouble a)
+                               (Double/parseDouble b)
+                               (Double/parseDouble c))]
+    (if (not= roots [0 0])
+      (do
+        (println "Root 1:" (first roots))
+        (println "Root 2:" (second roots)))
+      (println "Invalid roots."))))]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ clojure -m quad
+1
+25
+1
+Root 1: -0.04006420562288859
+Root 2: -24.95993579437711
+
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ exit
+
+Script done on 2023-02-16 21:02:55-05:00 [COMMAND_EXIT_CODE="1"]
+Script started on 2023-02-16 21:00:30-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ cat sc[K[Kquad.rb 
+def quadratic_roots(a, b, c)
+    if a != 0
+      arg = b**2 - 4*a*c
+      if arg >= 0
+        root1 = (-b + Math.sqrt(arg))/(2*a)
+        root2 = (-b - Math.sqrt(arg))/(2*a)
+        return [root1, root2]
+      else
+        puts "\n*** quadratic_roots: b^2 - 4ac is negative!"
+        return [0, 0]
+      end
+    else
+      puts "\n*** quadratic_roots: a is zero!"
+      return [0, 0]
+    end
+  end
+
+puts "Enter a: "
+a = gets.chomp.to_f
+puts "Enter b: "
+b = gets.chomp.to_f
+puts "Enter c: "
+c = gets.chomp.to_f
+
+roots = quadratic_roots(a, b, c)
+
+if roots != [0, 0]
+  puts "Root 1: #{roots[0]}"
+  puts "Root 2: #{roots[1]}"
+else
+  puts "Invalid roots."
+end]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ ruby s[Kquad.rb 
+Enter a: 
+1
+Enter b: 
+25
+Enter c: 
+1
+Root 1: -0.04006420562288859
+Root 2: -24.95993579437711
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/06[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/06[00m$ exit
+
+Script done on 2023-02-16 21:00:46-05:00 [COMMAND_EXIT_CODE="0"]
