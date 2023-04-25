@@ -1,0 +1,62 @@
+case 1:
+YY_RULE_SETUP
+#line 6 "example1.lex"
+printf("Start command received\n");
+	YY_BREAK
+case 2:
+YY_RULE_SETUP
+#line 7 "example1.lex"
+printf("Stop command received\n");
+	YY_BREAK
+case 3:
+YY_RULE_SETUP
+#line 8 "example1.lex"
+ECHO;
+	YY_BREAK
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+case 1:
+YY_RULE_SETUP
+#line 6 "example2.lex"
+printf("NUMBER\n");
+	YY_BREAK
+case 2:
+YY_RULE_SETUP
+#line 7 "example2.lex"
+printf("WORD\n");
+	YY_BREAK
+case 3:
+YY_RULE_SETUP
+#line 8 "example2.lex"
+ECHO;
+	YY_BREAK
+#line 739 "lex.yy.c"
+case YY_STATE_EOF(INITIAL):
+	yyterminate();
+
+123
+NUMBER
+
+asdf
+WORD
+
+123asdf
+NUMBER
+WORD
+
+What happens? Why?
+It detects if it has numbers or letters.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What differentiates a terminal from a non-terminal?
+Stuff in the lex file is terminal, the stuff in the y file in non-terminal.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ Do you see anything strange?
+ Nope
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
