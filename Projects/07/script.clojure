@@ -1,0 +1,33 @@
+Script started on 2023-02-22 16:44:51-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ cat proj7.clj
+;; Alex Miller
+;; 3/6
+
+(ns proj7)
+
+(defn print-array [arr]
+  (doseq [elem arr]
+    (println elem)))
+
+(defn read-array [size]
+  (vec (repeatedly size #(let [line (read-line)]
+                            (Double/parseDouble (.trim line))))))
+
+(println "How many values are in the array?")
+(let [num-values (Integer/parseInt (read-line))
+      arr (read-array num-values)]
+  (println "The array values are:")
+  (print-array arr))]0;]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ clojure -m proj7.[K
+How many values are in the array?
+3
+1
+2
+3
+The array values are:
+1.0
+2.0
+3.0
+
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ exit
+
+Script done on 2023-02-22 16:45:14-05:00 [COMMAND_EXIT_CODE="1"]

@@ -1,0 +1,185 @@
+Script started on 2023-02-22 16:32:12-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ cat proj7.java 
+// Alex Miller
+// 3/6
+
+import java.util.Scanner;
+
+public class proj7 {
+    public static void printArray(double[] arr) {
+        for (double elem : arr) {
+            System.out.println(elem);
+        }
+    }
+
+    public static void readArray(double[] arr) {
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("Enter a value for element " + i + ": ");
+            arr[i] = sc.nextDouble();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("How many values do you want in the array? ");
+        int numValues = sc.nextInt();
+
+        double[] arr = new double[numValues];
+
+        readArray(arr);
+        printArray(arr);
+    }
+}]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ javac -deprecation prok[Kj7.java 
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ java pro[Kr[Koj7
+How many values do you want in the array? 5
+Enter a value for element 0: 3
+Enter a value for element 1: 4
+Enter a value for element 2: 2
+Enter a value for element 3: 1
+Enter a value for element 4: 7
+3.0
+4.0
+2.0
+1.0
+7.0
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ exit
+
+Script done on 2023-02-22 16:32:47-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-03-09 20:00:58-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="172" LINES="9"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/07[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ gnatmake proj7.adb 
+x86_64-linux-gnu-gcc-7 -c proj7.adb
+x86_64-linux-gnu-gnatbind-7 -x proj7.ali
+x86_64-linux-gnu-gnatlink-7 proj7.ali
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/07[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ ./proj7 
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ 1.00000E+01
+ 9.00000E+00
+ 8.00000E+00
+ 7.00000E+00
+ 6.00000E+00
+ 5.00000E+00
+ 4.00000E+00
+ 3.00000E+00
+ 2.00000E+00
+ 1.00000E+00
+]0;ajm94@gold17: ~/Desktop/CS 214/Projects/07[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ cat proj7.adb
+-- Alex Miller
+-- 3/6
+
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
+
+procedure proj7 is
+ type FArray is array (Positive range <>) of Float;
+   My_Array : FArray(1..10);
+procedure printArray(arr: in FArray) is
+begin
+
+   for I in My_Array'Range loop
+
+      Put( arr(I) );
+      New_Line;
+
+   end loop;
+   return;
+
+end printArray;
+
+procedure readArray is
+begin
+
+   for I in My_Array'Range loop
+
+      Get(My_Array(I));
+
+   end loop;
+   return;
+
+end readArray;
+
+begin
+
+   readArray;
+   printArray(My_Array);
+
+end proj7;]0;ajm94@gold17: ~/Desktop/CS 214/Projects/07[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ exit
+
+Script done on 2023-03-09 20:01:37-05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2023-02-22 16:44:51-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ cat proj7.clj
+;; Alex Miller
+;; 3/6
+
+(ns proj7)
+
+(defn print-array [arr]
+  (doseq [elem arr]
+    (println elem)))
+
+(defn read-array [size]
+  (vec (repeatedly size #(let [line (read-line)]
+                            (Double/parseDouble (.trim line))))))
+
+(println "How many values are in the array?")
+(let [num-values (Integer/parseInt (read-line))
+      arr (read-array num-values)]
+  (println "The array values are:")
+  (print-array arr))]0;]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ clojure -m proj7.[K
+How many values are in the array?
+3
+1
+2
+3
+The array values are:
+1.0
+2.0
+3.0
+
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ exit
+
+Script done on 2023-02-22 16:45:14-05:00 [COMMAND_EXIT_CODE="1"]
+Script started on 2023-02-22 16:38:21-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="9"]
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ cat proj7.rb 
+# Alex Miller
+# 3/6
+
+def print_array(arr)
+    arr.each { |elem| puts elem }
+  end
+  
+  def read_array(size)
+    arr = []
+    size.times do |i|
+      print "Enter a value for element #{i}: "
+      arr << gets.chomp.to_f
+    end
+    arr
+  end
+  
+  print "How many values do you want in the array? "
+  num_values = gets.chomp.to_i
+  
+  arr = read_array(num_values)
+  print_array(arr)]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ ruby proj7.rb 
+How many values do you want in the array? 4
+Enter a value for element 0: 6
+Enter a value for element 1: 2
+Enter a value for element 2: 6
+Enter a value for element 3: 1
+6.0
+2.0
+6.0
+1.0
+]0;ajm94@gold33: ~/Desktop/CS 214/Projects/07[01;32majm94@gold33[00m:[01;34m~/Desktop/CS 214/Projects/07[00m$ exit
+
+Script done on 2023-02-22 16:38:41-05:00 [COMMAND_EXIT_CODE="0"]

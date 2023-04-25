@@ -1,0 +1,19 @@
+Script started on 2023-03-27 19:38:28-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="186" LINES="9"]
+]0;ajm94@gold08: ~/Desktop/CS 214/Projects/08[01;32majm94@gold08[00m:[01;34m~/Desktop/CS 214/Projects/08[00m$ gnatmake name_tester.adb [Kclojure -m nameTester.clj [K[K[K[K[K
+WARNING: read already refers to: #'clojure.core/read in namespace: nameTester, being replaced by: #'nameTester/read
+
+#nameTester.Name{:firstName John, :middleName Paul, :lastName Jones}
+John Paul Jones
+
+#nameTester.Name{:firstName Jane, :middleName Penelope, :lastName Jones}
+Jane Penelope Jones
+
+#nameTester.Name{:firstName Jinx, :middleName Joy, :lastName Jones}
+Jinx Joy Jones
+
+
+All tests passed!
+
+]0;ajm94@gold08: ~/Desktop/CS 214/Projects/08[01;32majm94@gold08[00m:[01;34m~/Desktop/CS 214/Projects/08[00m$ exit
+
+Script done on 2023-03-27 19:38:47-04:00 [COMMAND_EXIT_CODE="0"]
