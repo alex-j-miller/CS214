@@ -1,0 +1,13 @@
+Script started on 2023-02-13 19:20:01-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="12"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ clojure
+[KClojure 1.10.1
+[Kuser=> [Kuser=> [Kuser=> (fn [x y z][C[C[C[C[C[C[C (([K+ x y z)[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(fn [x y z] (+ x y z))
+[K#object[user$eval136$fn__137 0x5183d589 "user$eval136$fn__137@5183d589"]
+user=> [Kuser=> [Kuser=> (fn [x][C[C[C (nil? x)[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(fn [x] (nil? x))
+#object[user$eval140$fn__141 0x4d4960c8 "user$eval140$fn__141@4d4960c8"]
+user=> [Kuser=> [Kuser=> (fn [][C[C 17.2)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(fn [] 17.2)
+#object[user$eval144$fn__145 0x47c64cfe "user$eval144$fn__145@47c64cfe"]
+user=> [Kuser=> [Kuser=> 
+[K]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ exit
+
+Script done on 2023-02-13 19:21:12-05:00 [COMMAND_EXIT_CODE="0"]

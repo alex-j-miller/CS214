@@ -1,0 +1,22 @@
+Script started on 2023-02-13 19:34:49-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="12"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ clojure
+[KClojure 1.10.1
+[Kuser=> [Kuser=> [Kuser=> (defn negate [x][C[C[C (* x -1)[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(defn negate [x] (* x -1))
+[K#'user/negate
+user=> [Kuser=> [Kuser=> (negate [-1 2 -3][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(negate [-1 2 -3])
+Execution error (ClassCastException) at user/negate (REPL:1).
+class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+user=> [Kuser=> [Kuser=> (negate [-1 2 -3])[C[C[C[C[C[C[C[Cdefn negate [x] (* x -1))[1P1))[1P1))[1P1))[1P1))[C[1P)) ))0)) ))x)) ))[1P[1@-[C[C[C[C[C[1P))[C[C[C[C[C[C[C[C[C[K(defn negate [x] (- 0 x))
+#'user/negate
+user=> [Kuser=> [Kuser=> (defn negate [x] (- 0 x))[C[C[C[C[C[C[C[C[7Pnegate [-1 2 -3])[C[C[C[C[C[C[C[K(negate [-1 2 -3])
+Execution error (ClassCastException) at user/negate (REPL:1).
+class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+user=> [Kuser=> [Kuser=> (negate [-1 2 -3])[C[C[C[C[C[C[C[Cdefn negate [x] (- 0 x))[C[C[C[C[C[C[C[C[7Pnegate [-1 2 -3])[C[C[C[C[C[C[C[K(defn negate [x sequence][C[C[C[C[C[C[C[C[C[C[C[C (map (fn [x][C[C[C 9[K(- 0 x [K)[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C sequence)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(defn negate [x sequence] (map (fn [x] (- 0 x)) sequence))
+#'user/negate
+user=> [Kuser=> [Kuser=> (defn negate [x sequence] (map (fn [x] (- 0 x)) sequence))[C[C[C[C[C[C[C[Cnegate [-1 2 -3])[K[C[C[C[C[C[C[C[K(negate [-1 2 -3])
+Execution error (ArityException) at user/eval145 (REPL:1).
+Wrong number of args (1) passed to: user/negate
+user=> [Kuser=> [Kuser=> (negate [-1 2 -3])[C[C[C[C[C[C[C[Cdefn negate [x sequence] (map (fn [x] (- 0 x)) sequence))[C[1P[1P[1P[C[C[C[C[C[C[C[Cnegate [-1 2 -3])[K[C[C[C[C[C[C[C[K
+[K]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ exit
+
+Script done on 2023-02-13 19:41:29-05:00 [COMMAND_EXIT_CODE="0"]

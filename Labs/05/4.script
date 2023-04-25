@@ -1,0 +1,46 @@
+Script started on 2023-02-13 19:43:13-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="197" LINES="33"]
+]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ clojure
+[KClojure 1.10.1
+[Kuser=> [Kuser=> [Kuser=> (reduce + [1 2 3][C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce + [1 2 3])
+6
+user=> [Kuser=> [Kuser=> (reduce + '(1 2 3)[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[K(reduce + '(1 2 3))
+6
+user=> [Kuser=> [Kuser=> (reduce max [1 2 3][C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce max [1 2 3])
+3
+user=> [Kuser=> [Kuser=> (reduce conj [1 2 3][C[C[C[C[C[C[C [4 5 6][C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce conj [1 2 3] [4 5 6])
+[1 2 3 4 5 6]
+user=> [Kuser=> [Kuser=> (reduce + [1 2 3 4 5][C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce + [1 2 3 4 5])
+15
+user=> [Kuser=> [Kuser=> (reduce + 1 [2 3 4 5][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce + 1 [2 3 4 5])
+15
+user=> [Kuser=> [Kuser=> (reduce + 1 '(2 3 4 5)[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[K(reduce + 1 '(2 3 4 5))
+15
+user=> [Kuser=> [Kuser=> (reduce max 5 [4 3 2 1][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce max 5 [4 3 2 1])
+5
+user=> [Kuser=> [Kuser=> (reduce bit-or [1 2 3 4][C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce bit-or [1 2 3 4])
+7
+user=> [Kuser=> [Kuser=> (reduce str ["a" "b" "c"][C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce str ["a" "b" "c"])
+"abc"
+user=> [Kuser=> [Kuser=> (reduce + 1 2 [3 4 5][C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(reduce + 1 2 [3 4 5])
+Execution error (ArityException) at user/eval21 (REPL:1).
+Wrong number of args (4) passed to: clojure.core/reduce
+user=> [Kuser=> [Kuser=> (reduce + 1 '(2 3 4)[C[C[C[C[C[C[C 5)[C[C[C[C[C[C[C[K(reduce + 1 '(2 3 4) 5)
+Execution error (ArityException) at user/eval23 (REPL:1).
+Wrong number of args (4) passed to: clojure.core/reduce
+user=> [Kuser=> [Kuser=> (defn csv [seq][C[C[C[C[C[C[C[C[C[C[C[C[K[K      (reduce (fn [a b][C[C[C[C[C[K(defn csv [seq]
+[K      (reduce (fn [a b] (str a "," b)[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C seq)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K   )[K      (reduce (fn [a b] (str a "," b)) seq)
+[K   )[K   )
+[K#'user/csv
+user=> [Kuser=> [Kuser=> (csv [11 22 33][C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(csv [11 22 33])
+"11,22,33"
+user=> [Kuser=> [Kuser=> (defn totalItems [seqOfSeqs][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K   (reduce + (map cou[K(defn totalItems [seqOfSeqs]
+[K   (reduce + (map count seqOfSeqs)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K  )[K   (reduce + (map count seqOfSeqs))
+[K  )[K  )
+#'user/totalItems
+user=> [Kuser=> [Kuser=> 
+user=> [Kuser=> [Kuser=> (totalItems [["Ann"][C[C[C[C[C[C[C ["Bob" "Chris"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ["Dan" "Eve" "Fred"][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(totalItems [["Ann"] ["Bob" "Chris"] ["Dan" "Eve" "Fred"]])
+6
+user=> [Kuser=> [Kuser=> 
+[K]0;ajm94@gold17: ~/Desktop/CS 214/Labs/05[01;32majm94@gold17[00m:[01;34m~/Desktop/CS 214/Labs/05[00m$ exit
+
+Script done on 2023-02-13 19:45:33-05:00 [COMMAND_EXIT_CODE="0"]
