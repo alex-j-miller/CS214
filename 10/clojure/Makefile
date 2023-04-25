@@ -1,3 +1,0 @@
-all:
-	clojure -m birds
-
